@@ -45,6 +45,7 @@
     var self     = this
     var $targets = this.$body
       .find(this.selector)
+      .filter(':visible')
       .map(function () {
         var $el   = $(this)
         var href  = $el.data('target') || $el.attr('href')
