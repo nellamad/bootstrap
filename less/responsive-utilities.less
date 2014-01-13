@@ -23,34 +23,102 @@
 
 
 // Visibility utilities
-.visible-xs {
+// Note: Deprecated .visible-xs as of v3.1.0
+.visible-xs,
+.visible-xs-block {
   .responsive-invisibility();
 
   @media (max-width: @screen-xs-max) {
-    .responsive-visibility();
+    .responsive-visibility(block);
   }
 }
-.visible-sm {
+.visible-xs-inline {
+  .responsive-invisibility();
+
+  @media (max-width: @screen-xs-max) {
+    .responsive-visibility(inline);
+  }
+}
+.visible-xs-inline-block {
+  .responsive-invisibility();
+
+  @media (max-width: @screen-xs-max) {
+    .responsive-visibility(inline-block);
+  }
+}
+
+// Note: Deprecated .visible-sm as of v3.1.0
+.visible-sm,
+.visible-sm-block {
   .responsive-invisibility();
 
   @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    .responsive-visibility();
+    .responsive-visibility(block);
   }
 }
-.visible-md {
+.visible-sm-inline {
+  .responsive-invisibility();
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-visibility(inline);
+  }
+}
+.visible-sm-inline-block {
+  .responsive-invisibility();
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-visibility(inline-block);
+  }
+}
+
+// Note: Deprecated .visible-md as of v3.1.0
+.visible-md,
+.visible-md-block {
   .responsive-invisibility();
 
   @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-    .responsive-visibility();
+    .responsive-visibility(block);
   }
 }
-.visible-lg {
+.visible-md-inline {
+  .responsive-invisibility();
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-visibility(inline);
+  }
+}
+.visible-md-inline-block {
+  .responsive-invisibility();
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-visibility(inline-block);
+  }
+}
+
+// Note: Deprecated .visible-lg as of v3.1.0
+.visible-lg,
+.visible-lg-block {
   .responsive-invisibility();
 
   @media (min-width: @screen-lg-min) {
-    .responsive-visibility();
+    .responsive-visibility(block);
   }
 }
+.visible-lg-inline {
+  .responsive-invisibility();
+
+  @media (min-width: @screen-lg-min) {
+    .responsive-visibility(inline);
+  }
+}
+.visible-lg-inline-block {
+  .responsive-invisibility();
+
+  @media (min-width: @screen-lg-min) {
+    .responsive-visibility(inline-block);
+  }
+}
+
 
 .hidden-xs {
   @media (max-width: @screen-xs-max) {
@@ -78,11 +146,27 @@
 //
 // Media queries are placed on the inside to be mixin-friendly.
 
-.visible-print {
+// Note: Deprecated .visible-print as of v3.1.0
+.visible-print,
+.visible-print-block {
   .responsive-invisibility();
 
   @media print {
     .responsive-visibility();
+  }
+}
+.visible-print-inline {
+  .responsive-invisibility();
+
+  @media print {
+    .responsive-visibility(inline);
+  }
+}
+.visible-print-inline-block {
+  .responsive-invisibility();
+
+  @media print {
+    .responsive-visibility(inline-block);
   }
 }
 

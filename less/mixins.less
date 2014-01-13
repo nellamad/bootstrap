@@ -598,8 +598,8 @@
 // Responsive utilities
 // -------------------------
 // More easily include all the states for responsive-utilities.less.
-.responsive-visibility() {
-  display: block !important;
+.responsive-visibility(@display: block) {
+  display: @display !important;
   table&  { display: table; }
   tr&     { display: table-row !important; }
   th&,
